@@ -16,7 +16,7 @@ public class Runner {
 		Recipe[] recipes = readLines(dataPath);
 
 		for (Recipe recipe : recipes) {
-			System.out.println(recipe.id + ": " + recipe.name);
+			System.out.println(recipe);
 		}
 	}
 
