@@ -10,6 +10,7 @@ public class Recipe {
 
 	public static int recipeSize = 3;
 	
+	int id = 0;
 	String name = null;
 
 	public static void main(String[] args) {
@@ -18,7 +19,7 @@ public class Recipe {
 		Recipe[] recipes = readLines(dataPath);
 
 		for (Recipe recipe : recipes) {
-			System.out.println(recipe.name);
+			System.out.println(recipe.id + ": " + recipe.name);
 		}
 	}
 	
@@ -40,6 +41,7 @@ public class Recipe {
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		try {
 			for (int i = 0; i < recipes.length; i++) {
+				recipes[i].id = i + 1;
 				recipes[i].name = bufferedReader.readLine();
 			}
 			bufferedReader.close();
