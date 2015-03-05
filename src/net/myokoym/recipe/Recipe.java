@@ -25,6 +25,7 @@ public class Recipe {
 			recipes[0] = bufferedReader.readLine();
 			recipes[1] = bufferedReader.readLine();
 			recipes[2] = bufferedReader.readLine();
+			bufferedReader.close();
 		} catch (IOException e) {
 			System.err.println("ファイルの読み込みに失敗しました: <" + fileName + ">");
 			System.exit(1);		
