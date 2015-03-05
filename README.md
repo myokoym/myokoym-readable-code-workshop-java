@@ -48,6 +48,12 @@ $ java -cp bin/ net.myokoym.recipe.Recipe
 3. コミットメッセージを入力
 4. CommitまたはCommit and Pushを押す
 
+### コミットログ確認手順
+
+1. Git RepositoriesビューのRecipeを右クリック
+2. Show In -> Historyを選択
+3. （右クリックからpushもできます）
+
 ### clone手順
 
 TODO
