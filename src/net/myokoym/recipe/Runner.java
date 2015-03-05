@@ -31,15 +31,11 @@ public class Runner {
 		}
 		
 		Recipe[] recipes = new Recipe[recipeSize];
-		for (int i = 0; i < recipes.length; i++) {
-			recipes[i] = new Recipe();
-		}		
 		
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		try {
 			for (int i = 0; i < recipes.length; i++) {
-				recipes[i].id = i + 1;
-				recipes[i].name = bufferedReader.readLine();
+				recipes[i] = new Recipe(i + 1, bufferedReader.readLine());
 			}
 			bufferedReader.close();
 		} catch (IOException e) {
