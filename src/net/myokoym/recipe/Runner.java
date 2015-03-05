@@ -12,11 +12,18 @@ public class Runner {
 
 	public static void main(String[] args) {
 		String dataPath = args[0];
+		int targetId = 0;
+		if (args.length > 1) {
+			targetId = Integer.parseInt(args[1]);
+		}
 		
 		String[] lines = readLines(dataPath);
 		Recipe[] recipes = createRecipes(lines);
 
 		for (Recipe recipe : recipes) {
+			if (targetId != 0 && targetId != recipe.id) {
+				continue;
+			}
 			System.out.println(recipe);
 		}
 	}

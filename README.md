@@ -37,6 +37,10 @@ $ javac -d bin/ src/net/myokoym/recipe/*.java
 $ java -cp bin/ net.myokoym.recipe.Runner data/recipe-data.txt
 ```
 
+## レシピIDを指定して実行
+
+第2引数に数値を指定すると、指定したIDのレシピのみを出力します。
+
 ## EGitメモ
 
 ### Gitリポジトリー作成手順
