@@ -64,3 +64,8 @@ $ java -cp bin/ net.myokoym.recipe.Recipe
 5. ブランチ（master）を選択
 6. あとはデフォルトのまま数回Nextを押してFinish
 7. Git Repositoriesビューにクローンしたリポジトリーが表示されればOK
+
+### SSHキーの場所の設定
+
+1. メニューバー -> Window -> Preferenceを選択
+2. sshで検索して、SSH2の項目を選択
