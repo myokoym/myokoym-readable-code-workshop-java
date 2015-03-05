@@ -19,15 +19,19 @@ public class Recipe {
 			System.exit(1);		
 		}
 		
-		String recipe = null;
+		String recipes[] = new String[3];
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		try {
-			recipe = bufferedReader.readLine();
+			recipes[0] = bufferedReader.readLine();
+			recipes[1] = bufferedReader.readLine();
+			recipes[2] = bufferedReader.readLine();
 		} catch (IOException e) {
 			System.err.println("ファイルの読み込みに失敗しました: <" + fileName + ">");
 			System.exit(1);		
 		}
 
-		System.out.println(recipe);
+		for (String recipe : recipes) {
+			System.out.println(recipe);
+		}
 	}
 }
