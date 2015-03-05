@@ -34,7 +34,7 @@ RunnerクラスをJavaアプリケーションとして実行してください�
 
 ### コマンドライン
 
-Recipe.javaをjavacコマンドでコンパイルしてからjavaコマンドで実行してください。
+javaファイルをjavacコマンドでコンパイルしてからjavaコマンドで実行してください。
 
 ```bash
 $ javac -d bin/ src/net/myokoym/recipe/*.java
