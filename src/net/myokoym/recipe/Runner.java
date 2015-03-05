@@ -13,14 +13,15 @@ public class Runner {
 	public static void main(String[] args) {
 		String dataPath = args[0];
 		
-		Recipe[] recipes = readLines(dataPath);
+		String[] lines = readLines(dataPath);
+		Recipe[] recipes = createRecipes(lines);
 
 		for (Recipe recipe : recipes) {
 			System.out.println(recipe);
 		}
 	}
 
-	private static Recipe[] readLines(String dataPath) {
+	private static String[] readLines(String dataPath) {
 		File file = new File(dataPath);
 		FileReader fileReader = null;
 		try {
@@ -30,12 +31,12 @@ public class Runner {
 			System.exit(1);		
 		}
 		
-		Recipe[] recipes = new Recipe[recipeSize];
+		String[] lines = new String[recipeSize];
 		
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		try {
-			for (int i = 0; i < recipes.length; i++) {
-				recipes[i] = new Recipe(i + 1, bufferedReader.readLine());
+			for (int i = 0; i < lines.length; i++) {
+				lines[i] = bufferedReader.readLine();
 			}
 			bufferedReader.close();
 		} catch (IOException e) {
@@ -43,6 +44,14 @@ public class Runner {
 			System.exit(1);		
 		}
 		
+		return lines;
+	}
+	
+	private static Recipe[] createRecipes(String[] lines) {
+		Recipe[] recipes = new Recipe[lines.length];
+		for (int i = 0; i < lines.length; i++) {
+			recipes[i] = new Recipe(i + 1, lines[i]);
+		}
 		return recipes;
 	}
 }
