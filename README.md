@@ -28,7 +28,8 @@ $ java -cp bin/ net.myokoym.recipe.Recipe
 ### Gitリポジトリー作成手順
 
 1. Javaプロジェクト作成
-2. Team -> Share Projectを選択
+  * メニューバー -> File -> New ->Java Project
+2. プロジェクトを右クリック -> Team -> Share Projectを選択
 3. Gitを選択
 4. 「Use or create repository in parent folder of project」にチェック
 5. Create Repositoryを押してFinish
