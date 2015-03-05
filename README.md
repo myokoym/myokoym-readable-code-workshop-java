@@ -24,7 +24,7 @@ Java
 
 ### EclipseなどのIDE
 
-RecipeクラスをJavaアプリケーションとして実行してください。
+RunnerクラスをJavaアプリケーションとして実行してください。
 
 その際、実行の構成で引数にdata/recipe-data.txtを指定してください。
 
