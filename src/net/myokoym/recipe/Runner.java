@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class Runner {
 
-	public static int recipeSize = 3;
+	public static final int recipeSize = 3;
 
 	public static void main(String[] args) {
 		String dataPath = args[0];
