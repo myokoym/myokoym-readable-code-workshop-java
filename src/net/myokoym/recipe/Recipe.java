@@ -8,6 +8,8 @@ import java.io.IOException;
 
 public class Recipe {
 
+	public static int recipeSize = 3;
+	
 	String name = null;
 
 	public static void main(String[] args) {
@@ -30,7 +32,7 @@ public class Recipe {
 			System.exit(1);		
 		}
 		
-		Recipe[] recipes = new Recipe[3];
+		Recipe[] recipes = new Recipe[recipeSize];
 		for (int i = 0; i < recipes.length; i++) {
 			recipes[i] = new Recipe();
 		}		
