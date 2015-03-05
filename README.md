@@ -57,4 +57,10 @@ $ java -cp bin/ net.myokoym.recipe.Recipe
 
 ### clone手順
 
-TODO
+1. メニューバー -> File -> Importを選択
+2. Git -> Projects from Gitを選択
+3. Clone URIを選択
+4. フォークしたGitHubリポジトリーのURLを入力
+5. ブランチ（master）を選択
+6. あとはデフォルトのまま数回Nextを押してFinish
+7. Git Repositoriesビューにクローンしたリポジトリーが表示されればOK
