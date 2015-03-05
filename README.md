@@ -8,11 +8,23 @@ Java
 
 ## 使い方
 
-Recipe.javaのmainメソッドを実行してください。
+引数にレシピファイルを指定してRecipe.javaのmainメソッドを実行してください。
+
+### レシピファイルの書き方
+
+一行目にレシピ名を書いてください。
+
+例:
+
+```
+冷やし中華
+```
 
 ### EclipseなどのIDE
 
 RecipeクラスをJavaアプリケーションとして実行してください。
+
+その際、実行の構成で引数にdata/recipe-data.txtを指定してください。
 
 ### コマンドライン
 
@@ -20,7 +32,7 @@ Recipe.javaをjavacコマンドでコンパイルしてからjavaコマンドで
 
 ```bash
 $ javac -d bin/ src/net/myokoym/recipe/*.java
-$ java -cp bin/ net.myokoym.recipe.Recipe
+$ java -cp bin/ net.myokoym.recipe.Recipe data/recipe-data.txt
 ```
 
 ## EGitメモ
