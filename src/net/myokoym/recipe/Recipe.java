@@ -11,13 +11,13 @@ public class Recipe {
 	String name = null;
 
 	public static void main(String[] args) {
-		String fileName = args[0];
-		File file = new File(fileName);
+		String dataPath = args[0];
+		File file = new File(dataPath);
 		FileReader fileReader = null;
 		try {
 			fileReader = new FileReader(file);
 		} catch (FileNotFoundException e) {
-			System.err.println("ファイルのオープンに失敗しました: <" + fileName + ">");
+			System.err.println("ファイルのオープンに失敗しました: <" + dataPath + ">");
 			System.exit(1);		
 		}
 		
@@ -33,7 +33,7 @@ public class Recipe {
 			recipes[2].name = bufferedReader.readLine();
 			bufferedReader.close();
 		} catch (IOException e) {
-			System.err.println("ファイルの読み込みに失敗しました: <" + fileName + ">");
+			System.err.println("ファイルの読み込みに失敗しました: <" + dataPath + ">");
 			System.exit(1);		
 		}
 
