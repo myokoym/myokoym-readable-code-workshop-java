@@ -12,6 +12,15 @@ public class Recipe {
 
 	public static void main(String[] args) {
 		String dataPath = args[0];
+		
+		Recipe[] recipes = readLines(dataPath);
+
+		for (Recipe recipe : recipes) {
+			System.out.println(recipe.name);
+		}
+	}
+	
+	private static Recipe[] readLines(String dataPath) {
 		File file = new File(dataPath);
 		FileReader fileReader = null;
 		try {
@@ -24,7 +33,7 @@ public class Recipe {
 		Recipe[] recipes = new Recipe[3];
 		for (int i = 0; i < recipes.length; i++) {
 			recipes[i] = new Recipe();
-		}
+		}		
 		
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		try {
@@ -36,9 +45,7 @@ public class Recipe {
 			System.err.println("ファイルの読み込みに失敗しました: <" + dataPath + ">");
 			System.exit(1);		
 		}
-
-		for (Recipe recipe : recipes) {
-			System.out.println(recipe.name);
-		}
+		
+		return recipes;
 	}
 }
