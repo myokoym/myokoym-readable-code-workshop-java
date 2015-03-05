@@ -32,7 +32,7 @@ Recipe.javaをjavacコマンドでコンパイルしてからjavaコマンドで
 
 ```bash
 $ javac -d bin/ src/net/myokoym/recipe/*.java
-$ java -cp bin/ net.myokoym.recipe.Recipe data/recipe-data.txt
+$ java -cp bin/ net.myokoym.recipe.Runner data/recipe-data.txt
 ```
 
 ## EGitメモ
