@@ -39,9 +39,9 @@ public class Recipe {
 		
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		try {
-			recipes[0].name = bufferedReader.readLine();
-			recipes[1].name = bufferedReader.readLine();
-			recipes[2].name = bufferedReader.readLine();
+			for (int i = 0; i < recipes.length; i++) {
+				recipes[i].name = bufferedReader.readLine();
+			}
 			bufferedReader.close();
 		} catch (IOException e) {
 			System.err.println("ファイルの読み込みに失敗しました: <" + dataPath + ">");
