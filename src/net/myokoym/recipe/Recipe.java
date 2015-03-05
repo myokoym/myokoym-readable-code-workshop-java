@@ -8,6 +8,8 @@ import java.io.IOException;
 
 public class Recipe {
 
+	String name = null;
+
 	public static void main(String[] args) {
 		String fileName = args[0];
 		File file = new File(fileName);
@@ -19,20 +21,24 @@ public class Recipe {
 			System.exit(1);		
 		}
 		
-		String recipes[] = new String[3];
+		Recipe recipes[] = new Recipe[3];
+		for (int i = 0; i < recipes.length; i++) {
+			recipes[i] = new Recipe();
+		}
+		
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		try {
-			recipes[0] = bufferedReader.readLine();
-			recipes[1] = bufferedReader.readLine();
-			recipes[2] = bufferedReader.readLine();
+			recipes[0].name = bufferedReader.readLine();
+			recipes[1].name = bufferedReader.readLine();
+			recipes[2].name = bufferedReader.readLine();
 			bufferedReader.close();
 		} catch (IOException e) {
 			System.err.println("ファイルの読み込みに失敗しました: <" + fileName + ">");
 			System.exit(1);		
 		}
 
-		for (String recipe : recipes) {
-			System.out.println(recipe);
+		for (Recipe recipe : recipes) {
+			System.out.println(recipe.name);
 		}
 	}
 }
